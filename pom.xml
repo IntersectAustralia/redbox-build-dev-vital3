@@ -298,7 +298,7 @@
     </repository>
   </repositories>
   <scm>
-    <scmUrl>https://github.com/redbox-mint/redbox-build-dev-vital3</scmUrl>
+    <url>https://github.com/redbox-mint/redbox-build-dev-vital3</url>
     <developerConnection>scm:git:https://github.com/redbox-mint/redbox-build-dev-vital3</developerConnection>
   </scm>
 </project>
