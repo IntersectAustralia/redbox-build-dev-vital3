@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.googlecode.redbox-mint</groupId>
   <artifactId>redbox-vital3-curation-demo</artifactId>
-  <version>1.5.2-SNAPSHOT</version>
+  <version>1.5.3-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>ReDBox - Vital Curation Demo - Fedora v3.x</name>
   <parent>
@@ -304,6 +304,7 @@
   <scm>
     <url>https://github.com/redbox-mint/redbox-build-dev-vital3</url>
     <developerConnection>scm:git:https://github.com/redbox-mint/redbox-build-dev-vital3</developerConnection>
+    <tag>HEAD</tag>
   </scm>
   <distributionManagement>
 		<snapshotRepository>
