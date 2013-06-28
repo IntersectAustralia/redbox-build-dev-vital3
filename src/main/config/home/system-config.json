@@ -2,8 +2,8 @@
     "version": "1.1.0.1",
     "redbox.version.string": "${redbox.version}",
     "redbox.identity": {
-        "institution": "University of Examples",
-        "RIF-CS Group": "The University of Examples, Australia",
+        "institution": "University of Technology Sydney",
+        "RIF-CS Group": "University of Technology Sydney, Australia",
         "internalGrantString": "urn:uoe:internal"
     },
     "configured": true,
@@ -237,7 +237,7 @@
             "server": {
                 "url": "http://localhost:8888/fedora/",
                 "username": "fedoraAdmin",
-                "password": "fedoraAdmin",
+                "password": "Password1",
                 "namespace": "redbox",
                 "message": "Datastream update from ReDBox '[[OID]]'",
                 "timeout": "15",
