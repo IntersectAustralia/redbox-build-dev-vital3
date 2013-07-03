@@ -21,9 +21,9 @@
     <server.port>9000</server.port>
     <amq.port>9101</amq.port>
     <amq.stomp.port>9102</amq.stomp.port>
-    <server.url.base>http://${ip.address}:${server.port}/redbox/</server.url.base>
-    <mint.proxy.server>http://localhost:9001</mint.proxy.server>
-    <mint.amq.broker>tcp://localhost:9201</mint.amq.broker>
+    <server.url.base>http://${redboxServer.hostname}:${server.port}/redbox/</server.url.base>
+    <mint.proxy.server>http://${mintServer.hostname}:9001</mint.proxy.server>
+    <mint.amq.broker>tcp://${mintAmqBroker.hostname}:9201</mint.amq.broker>
     <dir.home>${project.home}/home</dir.home>
     <dir.portal>${project.home}/portal</dir.portal>
     <dir.server>${project.home}/server</dir.server>
@@ -77,7 +77,9 @@
     <profile>
       <id>build-package</id>
       <properties>
-        <server.url.base>http://localhost:${server.port}/redbox/</server.url.base>
+		<redboxServer.hostname>localhost</redboxServer.hostname>
+		<mintServer.hostname>localhost</mintServer.hostname>
+		<mintAmqBroker.hostname>localhost</mintAmqBroker.hostname>
         <app.location.windows>c:/tf2/redbox</app.location.windows>
     	<app.location.linux>/opt/redbox</app.location.linux>
       </properties>
@@ -105,6 +107,40 @@
         </plugins>
       </build>
     </profile>
+
+	<!-- DEV-Default profile -->
+	<profile>
+	  <id>dev</id>
+	  <activation>
+		  <activeByDefault>true</activeByDefault>
+		  <property>
+			  <name>env</name>
+			  <value>dev</value>
+		  </property>
+	  </activation>
+	  <properties>
+		  <redboxServer.hostname>localhost</redboxServer.hostname>
+		  <mintServer.hostname>localhost</mintServer.hostname>
+		  <mintAmqBroker.hostname>localhost</mintAmqBroker.hostname>
+	  </properties>
+	</profile>
+
+	<!-- QA -->
+	<profile>
+	  <id>qa</id>
+	  <activation>
+		  <property>
+			  <name>env</name>
+			  <value>qa</value>
+		  </property>
+	  </activation>
+	  <properties>
+		  <mintServer.hostname>ic2-redbox-vm.intersect.org.au</mintServer.hostname>
+		  <redboxServer.hostname>ic2-redbox-vm.intersect.org.au</redboxServer.hostname>
+		  <mintAmqBroker.hostname>ic2-redbox-vm.intersect.org.au</mintAmqBroker.hostname>
+	  </properties>
+	</profile>
+
   </profiles>
   <!-- The standard build/deploy process for making a server -->
   <build>
