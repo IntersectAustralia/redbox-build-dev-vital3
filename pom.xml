@@ -153,7 +153,7 @@
 	  <properties>
 		  <mintServer.hostname>ic2-ms22-staging1-vm.intersect.org.au</mintServer.hostname>
 		  <redboxServer.hostname>ic2-ms22-staging1-vm.intersect.org.au</redboxServer.hostname>
-		  <mintAmqBroker.hostname>ic2-ms22-staging-vm.intersect.org.au</mintAmqBroker.hostname>
+		  <mintAmqBroker.hostname>ic2-ms22-staging1-vm.intersect.org.au</mintAmqBroker.hostname>
 	  </properties>
 	</profile>
 
